@@ -1,4 +1,4 @@
-package wx.config.impl;
+package wx.config.impl.util;
 
 // -----( IS Java Code Template v1.2
 
@@ -10,16 +10,16 @@ import com.wm.app.b2b.server.ServiceException;
 import com.softwareag.util.IDataMap;
 // --- <<IS-END-IMPORTS>> ---
 
-public final class util
+public final class string
 
 {
 	// ---( internal utility methods )---
 
-	final static util _instance = new util();
+	final static string _instance = new string();
 
-	static util _newInstance() { return new util(); }
+	static string _newInstance() { return new string(); }
 
-	static util _cast(Object o) { return (util)o; }
+	static string _cast(Object o) { return (string)o; }
 
 	// ---( server methods )---
 
@@ -84,31 +84,6 @@ public final class util
 				//throw new ServiceException("Broken config line: " + inString);
 			}
 		}
-		// --- <<IS-END>> ---
-
-                
-	}
-
-
-
-	public static final void tokenizeFile (IData pipeline)
-        throws ServiceException
-	{
-		// --- <<IS-START(tokenizeFile)>> ---
-		// @sigtype java 3.5
-		// [i] field:0:required inString
-		// [o] field:1:required valueList
-		IDataMap pipeMap = new IDataMap(pipeline);
-		String inString = pipeMap.getAsString("inString");
-		if (inString == null) {
-			throw new ServiceException("Missing input inString");
-		} else {
-			inString = inString.replace("\r", "");
-			inString = inString.replace("\n\n", "\n");
-			String[] valueList = inString.split("\\n");
-			pipeMap.put("valueList", valueList);
-		}
-			
 		// --- <<IS-END>> ---
 
                 
