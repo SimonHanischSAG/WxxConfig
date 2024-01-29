@@ -5,4 +5,8 @@
   <array name="imports" type="value" depth="1">
     <value>com.softwareag.util.IDataMap</value>
   </array>
+  <value name="shared"></value>
+  <value name="extends"></value>
+  <array name="implements" type="value" depth="1">
+  </array>
 </Values>
